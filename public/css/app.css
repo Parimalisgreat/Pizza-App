@@ -86,8 +86,9 @@ body {
   font-size: 60px;
 }
 
-.hero-section .left a {
+.hero-section .left button {
   transition: all 0.3s ease-in-out;
+  border: none;
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
@@ -99,7 +100,7 @@ body {
   font-size: 20px;
   margin-top: 30px;
 }
-.hero-section .left a:hover {
+.hero-section .left button:hover {
   background: #b23301;
 }
 
@@ -173,4 +174,290 @@ body {
 
 .details {
   text-align: center;
+}
+
+.empty-cart .no-order {
+  margin-top: 50px;
+  text-align: center;
+  line-height: 2;
+}
+
+.empty-cart .no-order img {
+  height: 400px;
+  margin-top: 20px;
+}
+
+.empty-cart .no-order p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #666464;
+}
+
+.empty-cart .no-order a {
+  display: block;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 5px 20px;
+  color: #fff;
+  background: #FE5F1E;
+  border-radius: 25px;
+  font-size: 20px;
+  margin-top: 100px;
+  width: 200px;
+  margin: auto;
+}
+.empty-cart .no-order a:hover {
+  background: #b23301;
+}
+
+.empty-cart .order .head {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px #b9b8b8 solid;
+  width: 50%;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.empty-cart .order .head h1 {
+  margin-left: 20px;
+}
+
+.order-list {
+  padding: 20px 0px;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.order-list img {
+  height: 150px;
+}
+
+.order-list .qty {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order-list .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.order hr {
+  width: 50%;
+  margin: auto;
+  color: #b9b8b8;
+}
+
+.billing {
+  text-align: right;
+  width: 50%;
+  margin: auto;
+  padding: 20px 0px;
+}
+
+.bill-detail .cost {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.bill-detail .value {
+  font-weight: bold;
+  font-size: 25px;
+  padding-left: 40px;
+  color: #FE5F1E;
+}
+
+.billing .delivery input {
+  border: 1px solid #858383;
+  width: 50%;
+  padding: 10px;
+  margin: 10px 0px;
+  font-size: 15px;
+}
+
+.billing .delivery button {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  background: #FE5F1E;
+  border-radius: 25px;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 200px;
+}
+.billing .delivery button:hover {
+  background: #b23301;
+}
+
+.hidden {
+  margin-top: 20px;
+}
+
+.not-login {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  color: #fff;
+  background: #FE5F1E;
+  border-radius: 25px;
+  font-size: 20px;
+  width: 200px;
+}
+.not-login:hover {
+  background: #b23301;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  background: #F8F8F8;
+}
+
+.login-sec {
+  width: 400px;
+}
+
+.login-sec form {
+  background: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.login-sec form .name {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+.login-sec form .name label {
+  display: block;
+  color: #747171;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-sec form .name input {
+  border: 1px solid gray;
+  box-shadow: 0px 2px 10px #b3aeae;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin: 10px 0px;
+}
+
+.login-sec form .username {
+  margin-bottom: 20px;
+}
+
+.login-sec form .username label {
+  display: block;
+  color: #747171;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-sec form .username input {
+  border: 1px solid gray;
+  box-shadow: 0px 2px 10px #b3aeae;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin: 10px 0px;
+}
+
+.login-sec form .password label {
+  display: block;
+  color: #747171;
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-sec form .password input {
+  border: 1px solid gray;
+  box-shadow: 0px 2px 10px #b3aeae;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  margin: 10px 0px;
+}
+
+.login-sec form .password p {
+  color: #FE5F1E;
+  font-style: italic;
+  margin: 30px 0px;
+}
+
+.login-sec form .login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+.login-sec form .login-btn button {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  padding: 10px 10px;
+  color: #fff;
+  background: #FE5F1E;
+  border-radius: 25px;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 100px;
+}
+.login-sec form .login-btn button:hover {
+  background: #b23301;
+}
+
+.login-sec form .login-btn a {
+  transition: all 0.3s ease-in-out;
+  border: none;
+  text-decoration: none;
+  padding-left: 20px;
+  color: #FE5F1E;
+  font-size: 15px;
+  margin-top: 20px;
+  width: 200px;
+  font-weight: bold;
+}
+.login-sec form .login-btn a:hover {
+  color: #b23301;
+}
+
+.login-sec .copyright {
+  text-align: center;
+  color: #a19f9f;
+  padding-top: 20px;
 }

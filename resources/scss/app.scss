@@ -100,11 +100,12 @@ body{
     font-size: 60px;
 }
 
-.hero-section .left a{
+.hero-section .left button{
     transition: $smooth;
     &:hover{
         background: $primary-hover;
     }
+    border: none;
     text-decoration: none;
     font-weight: bold;
     cursor: pointer;
@@ -190,4 +191,298 @@ body{
 
 .details{
     text-align: center;
+}
+
+//Cart Section no-order
+
+.empty-cart .no-order
+{
+    margin-top: 50px;
+    text-align: center;
+    line-height: 2;
+}
+
+.empty-cart .no-order img{
+    height: 400px;
+    margin-top: 20px;
+}
+.empty-cart .no-order p{
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(102, 100, 100);
+}
+
+.empty-cart .no-order a{
+    display:block;
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding:5px 20px;
+    color: $pure;
+    background: $primary;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top:100px;
+    width: 200px;
+    margin: auto;
+}
+
+//Cart section orders present
+
+.empty-cart .order .head{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border-bottom:1px rgb(185, 184, 184) solid;
+    width: 50%;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.empty-cart .order .head h1{
+    margin-left: 20px;
+}
+
+.order-list{
+    padding: 20px 0px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-list img{
+    height:150px
+
+}
+
+.order-list .qty{
+    font-size: 18px;
+    font-weight: bold;
+}
+.order-list .price{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order hr{
+    width: 50%;
+    margin: auto;
+    color: rgb(185, 184, 184);
+}
+
+.billing{
+    text-align: right;
+    width: 50%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+.bill-detail .cost{
+    font-weight: bold;
+    font-size: 20px;
+}
+.bill-detail .value{
+    font-weight: bold;
+    font-size: 25px;
+    padding-left: 40px;
+    color: $primary;
+}
+
+.billing .delivery input
+{
+    border: 1px solid rgb(133, 131, 131);
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0px;
+    font-size: 15px;
+}
+
+.billing .delivery button
+{
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding:10px 20px;
+    color: $pure;
+    background: $primary;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 30px;
+    width: 200px;
+    
+}
+
+.hidden{
+    margin-top: 20px;
+}
+.not-login{
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding:10px 20px;
+    color: $pure;
+    background: $primary;
+    border-radius: 25px;
+    font-size: 20px;
+   
+    
+    width: 200px;
+}
+
+//Login Section (styles apply to both login and register page only one element of name is added)
+.login{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    background: $secondary;
+}
+
+.login-sec{
+    width: 400px;
+}
+
+.login-sec form{
+    background: $pure;
+    box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 30px;
+    
+    border-radius: 10px;
+}
+.login-sec form .name{
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.login-sec form .name label{
+    display: block;
+    color: rgb(116, 113, 113);
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.login-sec form .name input{
+    border: 1px solid gray;
+    box-shadow: 0px 2px 10px rgb(179, 174, 174);
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+
+.login-sec form .username{
+    margin-bottom: 20px;
+    
+}
+.login-sec form .username label{
+    display: block;
+    color: rgb(116, 113, 113);
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.login-sec form .username input{
+    border: 1px solid gray;
+    box-shadow: 0px 2px 10px rgb(179, 174, 174);
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+
+.login-sec form .password label{
+    display: block;
+    color: rgb(116, 113, 113);
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.login-sec form .password input{
+    border: 1px solid gray;
+    box-shadow: 0px 2px 10px rgb(179, 174, 174);
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin: 10px 0px;
+}
+.login-sec form .password p{
+    
+    color: $primary;
+    font-style:italic;
+    margin: 30px 0px;
+    
+}
+
+.login-sec form .login-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+}
+
+.login-sec form .login-btn button{
+    transition: $smooth;
+    &:hover{
+        background: $primary-hover;
+    }
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding:10px 10px;
+    color: $pure;
+    background: $primary;
+    border-radius: 25px;
+    font-size: 20px;
+    margin-top: 20px;
+    width: 100px;
+
+}
+.login-sec form .login-btn a{
+    transition: $smooth;
+    &:hover{
+        color: $primary-hover;
+    }
+    border: none;
+    text-decoration: none;
+    padding-left: 20px;      
+    color: $primary;
+      
+    font-size: 15px;
+    margin-top: 20px;
+    width: 200px;
+    font-weight: bold;
+}
+
+.login-sec .copyright{
+    text-align: center;
+    color: rgb(161, 159, 159);
+    padding-top: 20px;
+    
 }
