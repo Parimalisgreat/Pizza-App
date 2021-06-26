@@ -17,11 +17,12 @@
          </div>
          <div class="nav-links">
              <ul>
-                 <li><a href="#">Menu</a></li>
+                 <li><a href="/">Menu</a></li>
                  <li><a href="#">Offers</a></li>
                  <li><a href="/register">Register</a></li>
                  <li><a href="/login">Login</a></li>
-                 <li><a href="/cart"><img src="/img/cart.png" alt=""></a></li>
+                 
+                 <li><a href="/cart"><span class="cartCounter"><%=session.cart?session.cart.totalQty:''%></span><img src="/img/cart.png" alt=""></a></li>
              </ul>
          </div>
      </nav>

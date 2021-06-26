@@ -1,5 +1,9 @@
 @import './variables';
 
+@import '~noty/src/noty.scss';
+
+@import '~noty/src/themes/mint.scss';
+
 *{
     border-radius: 0;
     margin: 0;
@@ -66,6 +70,13 @@ body{
     display: inline-block;
     padding: 8px 10px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links .cartCounter{
+    color:$pure;
+    padding-right: 5px;
 }
 
 //Hero section
@@ -485,4 +496,11 @@ body{
     color: rgb(161, 159, 159);
     padding-top: 20px;
     
+}
+
+//For Noty animation
+
+.noty_theme__mint{
+    border-radius: 50px!important;
+    padding-left: 8px!important;
 }
