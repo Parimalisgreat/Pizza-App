@@ -1,21 +1,24 @@
 <section class="login">
     <div class="login-sec">
-        <form class="">
+        <form action="/login" method="POST" class="">
+          <%if(messages.error){%>
+            <span style="color: red;font-weight: bold;padding-bottom:10px;"><%=messages.error%></span>
+            <%}%>
           <div class=" username">
             <label class="" for="username">
               Email
             </label>
-            <input class="" id="username" type="email" placeholder="Enter your email" autocomplete="off">
+            <input name="email" class="" id="username" type="email" placeholder="Enter your email" autocomplete="off">
           </div>
           <div class="password">
             <label class="" for="password">
               Password
             </label>
-            <input class="" id="password" type="password" placeholder="********" autocomplete="off">
+            <input name="password" class="" id="password" type="password" placeholder="********" autocomplete="off">
             
           </div>
           <div class="login-btn">
-            <button class="" type="button">
+            <button class="" type="submit">
               Log In
             </button>
             <a class="" href="/register">
