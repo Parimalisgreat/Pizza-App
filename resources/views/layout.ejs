@@ -13,12 +13,12 @@
     
      <nav class="navbar">
          <div class="logo">
-             <img src="/img/logo.png" alt="logo">
+             <a href="/"><img src="/img/logo.png" alt="logo"></a>
          </div>
          <div class="nav-links">
              <ul>
                  <li><a href="/">Menu</a></li>
-                 <li><a href="#">Offers</a></li>
+                 <li><a href="/customer/orders">Orders</a></li>
                  <%if(user){%>
                 <li>
                     <form id="logout" action="/logout" method="POST">

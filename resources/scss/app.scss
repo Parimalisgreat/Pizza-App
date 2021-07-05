@@ -338,7 +338,7 @@ body{
 }
 
 .hidden{
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .not-login{
     transition: $smooth;
@@ -504,3 +504,53 @@ body{
     border-radius: 50px!important;
     padding-left: 8px!important;
 }
+
+//order summary
+
+.container
+{
+    
+    padding: 13px;
+    margin-left: 100px;
+    width: 80%;
+}
+
+.container h1{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#success-alert{
+    display: flex;
+    align-items: center;
+    background: rgb(82, 161, 82);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.order-table{
+    width: 100%;
+    background: $pure;
+   
+    text-align: left;
+    margin-top: 20px;
+}
+
+thead .head-row th{
+    padding: 10px;
+}
+
+tbody .link{
+    color: $primary;
+    text-decoration: none;
+}
+
+tbody tr td{
+    // text-align: center;
+    padding:10px;
+}
+
+//admin orders 

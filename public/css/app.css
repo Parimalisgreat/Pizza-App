@@ -588,7 +588,7 @@ body {
 }
 
 .hidden {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .not-login {
@@ -749,4 +749,46 @@ body {
 .noty_theme__mint {
   border-radius: 50px !important;
   padding-left: 8px !important;
+}
+
+.container {
+  padding: 13px;
+  margin-left: 100px;
+  width: 80%;
+}
+
+.container h1 {
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+#success-alert {
+  display: flex;
+  align-items: center;
+  background: #52a152;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.order-table {
+  width: 100%;
+  background: #fff;
+  text-align: left;
+  margin-top: 20px;
+}
+
+thead .head-row th {
+  padding: 10px;
+}
+
+tbody .link {
+  color: #FE5F1E;
+  text-decoration: none;
+}
+
+tbody tr td {
+  padding: 10px;
 }

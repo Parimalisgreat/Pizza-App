@@ -25,19 +25,21 @@
                 <span class="cost">Total Amount:</span>
                 <span class="value">₹<%=session.cart.totalPrice%></span>
             </div>
+            <%if(user){%>
             <div class="delivery" action="">
-                <form action="">
-                    <input type="text" placeholder="Phone Number">
-                    <input type="text" placeholder="Address">
+                <form action="/orders" method="POST">
+                    <input name="phone" type="text" placeholder="Phone Number">
+                    <input name="address" type="text" placeholder="Address">
                     <div>
                         <button type="submit">Order Now</button>
                     </div>
                 </form>
             </div>
-            <!-- <div class="hidden">
-                <a href="" class="not-login">Login to continue</a>
-            </div> -->
-            
+            <%}else{%>
+            <div class="hidden">
+                <a href="/login" class="not-login">Login to continue</a>
+            </div>
+            <%}%>
         </div>
     </div>
     <%}else{%>

@@ -30,7 +30,7 @@ function cartController(){
             //Check if item does not exist in cart
 
             // console.log(cart);
-
+           
             if(!cart.items[req.body._id]){
                 cart.items[req.body._id]={
                     item: req.body,
