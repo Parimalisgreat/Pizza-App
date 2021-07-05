@@ -1,0 +1,16 @@
+<section class="order-status">
+    <div class="status-container">
+        <div class="status-head">
+            <h1>Track delivery status</h1>
+            <h5><%=order._id%></h5>
+            <input id="hiddenInput" type="hidden" value="<%=JSON.stringify(order)%>">
+        </div>
+        <ul>
+            <li class="status-item" data-status="order_placed"><span>Order Placed</span></li>
+            <li class="status-item " data-status="confirmed"><span>Order Confirmation</span></li>
+            <li class="status-item" data-status="prepared"><span>Preparation</span></li>
+            <li class="status-item" data-status="delivered"><span>Out for Delivery</span></li>
+            <li class="status-item" data-status="completed"><span>Complete</span></li>
+        </ul>
+    </div>
+</section>

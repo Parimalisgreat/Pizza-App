@@ -20,7 +20,7 @@
                     <% orders.forEach((order)=>{%>
                         <tr>
                             <td>
-                               <a href="/" class="link"><%=order._id%></a> 
+                               <a href="/customer/orders/<%=order._id%>" class="link" id="status"><%=order._id%></a> 
                             </td>
                             <td>
                                 <%=order.phone%>

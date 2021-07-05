@@ -47,7 +47,7 @@ export function initAdmin(){
                             <form action="/admin/order/status" method="POST">
                                 <input type="hidden" name="orderId" value="${ order._id }">
                                 <select name="status" onchange="this.form.submit()"
-                                    class="">
+                                    class="status">
                                     <option value="order_placed"
                                         ${ order.status === 'order_placed' ? 'selected' : '' }>
                                         Placed</option>

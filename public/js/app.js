@@ -1879,7 +1879,7 @@ function initAdmin() {
 
   function generateMarkup(orders) {
     return orders.map(function (order) {
-      return "\n                    <tr>\n                    <td class=\"order-summary\">\n                        <p>".concat(order._id, "</p>\n                        <div>").concat(renderItems(order.items), "</div>\n                    </td>\n                    <td class=\"cust-name\">").concat(order.customerId.name, "</td>\n                    <td class=\"cust-address\">").concat(order.address, "</td>\n                    <td class=\"cust-status\">\n                        <div class=\"status\">\n                            <form action=\"/admin/order/status\" method=\"POST\">\n                                <input type=\"hidden\" name=\"orderId\" value=\"").concat(order._id, "\">\n                                <select name=\"status\" onchange=\"this.form.submit()\"\n                                    class=\"\">\n                                    <option value=\"order_placed\"\n                                        ").concat(order.status === 'order_placed' ? 'selected' : '', ">\n                                        Placed</option>\n                                    <option value=\"confirmed\" ").concat(order.status === 'confirmed' ? 'selected' : '', ">\n                                        Confirmed</option>\n                                    <option value=\"prepared\" ").concat(order.status === 'prepared' ? 'selected' : '', ">\n                                        Prepared</option>\n                                    <option value=\"delivered\" ").concat(order.status === 'delivered' ? 'selected' : '', ">\n                                        Delivered\n                                    </option>\n                                    <option value=\"completed\" ").concat(order.status === 'completed' ? 'selected' : '', ">\n                                        Completed\n                                    </option>\n                                </select>\n                            </form>\n                            \n                        </div>\n                    </td>\n                    <td class=\"date\">\n                        ").concat(moment__WEBPACK_IMPORTED_MODULE_2___default()(order.createdAt).format('hh:mm A'), "\n                    </td>\n                    <td class=\"bill\">\n                        ").concat(order.paymentStatus ? 'paid' : 'Not paid', "\n                    </td>\n                </tr>\n        ");
+      return "\n                    <tr>\n                    <td class=\"order-summary\">\n                        <p>".concat(order._id, "</p>\n                        <div>").concat(renderItems(order.items), "</div>\n                    </td>\n                    <td class=\"cust-name\">").concat(order.customerId.name, "</td>\n                    <td class=\"cust-address\">").concat(order.address, "</td>\n                    <td class=\"cust-status\">\n                        <div class=\"status\">\n                            <form action=\"/admin/order/status\" method=\"POST\">\n                                <input type=\"hidden\" name=\"orderId\" value=\"").concat(order._id, "\">\n                                <select name=\"status\" onchange=\"this.form.submit()\"\n                                    class=\"status\">\n                                    <option value=\"order_placed\"\n                                        ").concat(order.status === 'order_placed' ? 'selected' : '', ">\n                                        Placed</option>\n                                    <option value=\"confirmed\" ").concat(order.status === 'confirmed' ? 'selected' : '', ">\n                                        Confirmed</option>\n                                    <option value=\"prepared\" ").concat(order.status === 'prepared' ? 'selected' : '', ">\n                                        Prepared</option>\n                                    <option value=\"delivered\" ").concat(order.status === 'delivered' ? 'selected' : '', ">\n                                        Delivered\n                                    </option>\n                                    <option value=\"completed\" ").concat(order.status === 'completed' ? 'selected' : '', ">\n                                        Completed\n                                    </option>\n                                </select>\n                            </form>\n                            \n                        </div>\n                    </td>\n                    <td class=\"date\">\n                        ").concat(moment__WEBPACK_IMPORTED_MODULE_2___default()(order.createdAt).format('hh:mm A'), "\n                    </td>\n                    <td class=\"bill\">\n                        ").concat(order.paymentStatus ? 'paid' : 'Not paid', "\n                    </td>\n                </tr>\n        ");
     }).join('');
   }
 } // module.exports = initAdmin
@@ -1899,11 +1899,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! noty */ "./node_modules/noty/lib/noty.js");
 /* harmony import */ var noty__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(noty__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _admin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./admin */ "./resources/js/admin.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
 var addToCart = document.querySelectorAll('.add');
 var cartCounter = document.querySelector('.cartCounter');
+
 
 function updateCart(pizza) {
   axios__WEBPACK_IMPORTED_MODULE_0___default().post('/update-cart', pizza).then(function (res) {
@@ -1940,7 +1943,36 @@ if (alertMsg) {
   }, 2000);
 }
 
-(0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)();
+(0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(); //Change order status
+
+var statuses = document.querySelectorAll('.status-item');
+var hiddenInput = document.querySelector('#hiddenInput');
+var order = hiddenInput ? hiddenInput.value : null;
+order = JSON.parse(order);
+var time = document.createElement('small');
+
+function updateStatus(order) {
+  var stepCompleted = true;
+  statuses.forEach(function (status) {
+    var dataProp = status.dataset.status;
+
+    if (stepCompleted) {
+      status.classList.add('step-completed');
+    }
+
+    if (dataProp === order.status) {
+      stepCompleted = false;
+      time.innerText = moment__WEBPACK_IMPORTED_MODULE_3___default()(order.updatedAt).format('hh:mm A');
+      status.appendChild(time);
+
+      if (status.nextElementSibling) {
+        status.nextElementSibling.classList.add('current');
+      }
+    }
+  });
+}
+
+updateStatus(order);
 
 /***/ }),
 
