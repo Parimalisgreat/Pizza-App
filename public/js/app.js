@@ -1941,9 +1941,15 @@ if (alertMsg) {
   setTimeout(function () {
     alertMsg.remove();
   }, 2000);
-}
+} // initAdmin()
 
-(0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)(); //Change order status
+
+var adminAreaPath = window.location.pathname;
+
+if (adminAreaPath.includes('admin')) {
+  (0,_admin__WEBPACK_IMPORTED_MODULE_2__.initAdmin)();
+} //Change order status
+
 
 var statuses = document.querySelectorAll('.status-item');
 var hiddenInput = document.querySelector('#hiddenInput');

@@ -356,7 +356,8 @@ body {
 
 .right img {
   height: 500px;
-  padding-right: 10px;
+  margin-right: 10px;
+  margin-right: 0px;
 }
 
 .left {
@@ -421,8 +422,8 @@ body {
   font-size: 20px;
 }
 
-.details .size {
-  padding: 30px 20px;
+.menus .details .size {
+  padding: 30px 0px;
   border-radius: 25px;
   text-transform: uppercase;
   font-size: 20px;
@@ -526,6 +527,10 @@ body {
   height: 150px;
 }
 
+.order-list div {
+  text-align: center;
+}
+
 .order-list .qty {
   font-size: 18px;
   font-weight: bold;
@@ -534,6 +539,11 @@ body {
 .order-list .price {
   font-size: 18px;
   font-weight: bold;
+}
+
+.order-list div .size {
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 .order hr {
@@ -900,12 +910,13 @@ tbody tr td {
   background: #232323;
 }
 
-.order-status ul li:nth-child(1) {
-  padding-top: 0px;
+.order-status ul li:nth-child(1) span:after {
+  box-shadow: 0 -29px 1px 20px #F8F8F8;
+  padding-bottom: 0px;
 }
 
 .order-status ul li:nth-child(5) span:after {
-  box-shadow: 0 30px 1px 20px #F8F8F8;
+  box-shadow: 0 29px 1px 20px #F8F8F8;
   padding-bottom: 0px;
 }
 
@@ -932,4 +943,193 @@ tbody tr td {
 .order-status ul li small {
   float: right;
   font-size: 18px;
+}
+
+@media (max-width: 1496px) {
+  .logo {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .menu h1 {
+    margin-bottom: 20px;
+  }
+
+  .navbar {
+    width: 90%;
+    margin: auto;
+  }
+
+  .menu .menus {
+    width: 90%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin: auto;
+  }
+
+  .menu .menus {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .nav-links ul {
+    padding-right: 0px;
+    align-items: right;
+  }
+
+  .hero {
+    margin-top: 2px;
+  }
+}
+@media (max-width: 1228px) {
+  .right img {
+    height: 300px;
+  }
+
+  .menu-items img {
+    height: 200px;
+  }
+
+  .hero-section h6, h1 {
+    font-size: 30px;
+  }
+
+  .order .order-list {
+    width: 90%;
+  }
+
+  .empty-cart .order .head {
+    width: 90%;
+  }
+
+  .pizza-list img {
+    height: 100px;
+  }
+
+  .pizza-list h1 {
+    font-size: 20px;
+  }
+
+  .order hr {
+    width: 90%;
+  }
+
+  .billing {
+    width: 90%;
+  }
+}
+@media (max-width: 1128px) {
+  .menu h1 {
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+
+  .menus {
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+
+  .menu .menus {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 984px) {
+  .menu h1 {
+    margin-bottom: 80px;
+  }
+
+  .hero-section h6, h1 {
+    font-size: 20px;
+  }
+
+  .hero {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .left {
+    margin-left: 20px;
+  }
+
+  .orders .container {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .status-container {
+    width: 90%;
+  }
+
+  .admin-side .order-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 760px) {
+  .menu .menus {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-items {
+    width: 80%;
+    margin: auto;
+  }
+
+  .right img {
+    height: 300px;
+  }
+
+  .nav-links ul {
+    padding-left: 0px;
+  }
+}
+@media (max-width: 566px) {
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .right {
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 50%;
+    transform: translateX(-1%);
+  }
+
+  .right img {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+
+  .right {
+    display: none;
+  }
+}
+@media (max-width: 544px) {
+  .pizza-list h1 {
+    font-size: 20px;
+  }
+
+  .pizza-list span {
+    font-size: 20px;
+  }
+
+  .order-list img {
+    height: 50px;
+  }
+
+  .order-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
 }

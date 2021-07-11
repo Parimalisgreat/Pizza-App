@@ -51,7 +51,14 @@ if(alertMsg){
     },2000)
 }
 
-initAdmin()
+// initAdmin()
+
+let adminAreaPath =window.location.pathname
+
+if(adminAreaPath.includes('admin'))
+{
+    initAdmin()
+}
 
 //Change order status
 

@@ -26,7 +26,7 @@ const passport =require('passport')
 
 //Database connection
 
-const url ='mongodb://localhost/pizza'
+const url =process.env.MONGO_CONNECTION_URL
 
 mongoose.connect(url,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopology:true,useFindAndModify:true});
 
