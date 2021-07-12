@@ -34,7 +34,7 @@ const connection = mongoose.connection;
 
 connection.once('open',()=>{
     console.log('Database connected...');
-}).on('error',()=>{
+}).catch(err=>{
     console.log('Connection failed...')
 })
 
