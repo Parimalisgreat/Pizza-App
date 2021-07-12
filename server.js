@@ -32,10 +32,9 @@ mongoose.connect(url,{useNewUrlParser:true,useCreateIndex:true,useUnifiedTopolog
 
 const connection = mongoose.connection;
 
+connection.on('error', console.error.bind(console, 'connection error:'));
 connection.once('open',()=>{
     console.log('Database connected...');
-}).catch((err)=>{
-    console.log('Connection failed...')
 })
 
 //Session store
