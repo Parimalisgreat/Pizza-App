@@ -49,7 +49,8 @@ connection.once('open',()=>{
 app.use(session({
     secret: process.env.COOKIE_SECRET,
     resave:false,
-    store:MongoDbStore.create({mongoUrl:process.env.MONGO_CONNECTION_URL}),
+    // store:MongoDbStore.create({mongoUrl:process.env.MONGO_CONNECTION_URL}),
+    client:connection.getClient(),
     saveUnitialized:false,
     cookie:{maxAge:1000*60*60*24} //24hrs
 }))
