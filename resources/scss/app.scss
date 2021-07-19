@@ -11,6 +11,10 @@
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family:'Lato',sans-serif;
     -webkit-font-smoothing:antialiased;
