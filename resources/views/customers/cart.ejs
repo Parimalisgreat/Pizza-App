@@ -28,8 +28,8 @@
             <%if(user){%>
             <div class="delivery" action="">
                 <form action="/orders" method="POST">
-                    <input name="phone" type="text" placeholder="Phone Number">
-                    <input name="address" type="text" placeholder="Address">
+                    <input name="phone" type="text" placeholder="Phone Number" autocomplete="off">
+                    <input name="address" type="text" placeholder="Address" autocomplete="off">
                     <div>
                         <button type="submit">Order Now</button>
                     </div>
